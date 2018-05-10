@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DriveNoWorry</string>
+    <string name="tab_home">主页</string>
+    <string name="tab_my">我的</string>
+    <string name="tab_statics">统计</string>
+    <string name="tab_physical_condition">体检</string>
+    <string name="tab_doctor_advice">医嘱</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

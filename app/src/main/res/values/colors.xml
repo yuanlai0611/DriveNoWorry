@@ -3,4 +3,24 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!--FragmentTabHost的颜色-->
+    <color name="colorPressed">#ea986c</color>
+    <color name="colorNormal">#bfbfbf</color>
+
+    <!--fragment my-->
+    <color name="borderColor">#ffffff</color>
+    <color name="colorText">#ffffff</color>
+    <color name="colorDivider">#ffffff</color>
+    <color name="colorPlate">#ffffff</color>
+    <color name="colorBackGround">#f5f5f5</color>
+    <color name="colorPlateDivider">#d9dee1</color>
+
+    <!--log out button-->
+    <color name="colorLogOutButtonNormal">#ffffff</color>
+    <color name="colorLogOutButtonPressed">#e9e6e6</color>
+    <color name="colorLogOutButtonStroke">#e9e6e6</color>
+    <color name="colorLogOutButtonText">#ea986c</color>
+
 </resources>
