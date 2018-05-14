@@ -26,6 +26,8 @@ public abstract class BaseFragment extends Fragment{
             mViewParent.removeView(mView);
         }
 
+        LogD("调用了onCreateView（）");
+
         initView(mView);
         setListener();
         return mView;

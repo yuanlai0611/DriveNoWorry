@@ -1,15 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.StaticsFragment">
+    android:background="@color/colorWhite">
 
-    <TextView
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tab_statics" />
+        <RelativeLayout
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="304dp"
+            android:background="@drawable/my_background">
 
-</RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="84dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/statics_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+                <!--<include-->
+                    <!--layout="@layout/statics_result_card"/>-->
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                app:contentInsetStart="0dp"
+                android:paddingTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+
+                <RelativeLayout
+                    android:id="@+id/statics_title"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_decide_by_span"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/decide_time_span"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal"
+                        android:layout_width="55dp"
+                        android:layout_height="28dp">
+
+                        <TextView
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/colorStaticsBackground"
+                            android:text="按月"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:id="@+id/decide_by_span"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/below_more"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="血压统计图"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="13sp"
+                android:textColor="@color/colorUpdate"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="每星期重新统计一遍"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_marginTop="20dp"
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"/>
+
+</LinearLayout>

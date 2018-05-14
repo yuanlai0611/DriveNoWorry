@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
 
 
     <!--FragmentTabHost的颜色-->
@@ -17,10 +18,47 @@
     <color name="colorBackGround">#f5f5f5</color>
     <color name="colorPlateDivider">#d9dee1</color>
 
+    <color name="colorToolbar">#ea986c</color>
+
     <!--log out button-->
     <color name="colorLogOutButtonNormal">#ffffff</color>
     <color name="colorLogOutButtonPressed">#e9e6e6</color>
     <color name="colorLogOutButtonStroke">#e9e6e6</color>
     <color name="colorLogOutButtonText">#ea986c</color>
+
+    <!--fragment statics-->
+    <color name="colorStaticsBackground">#f56e07</color>
+    <color name="colorTitleColor">#ffffff</color>
+    <color name="colorRadioButtonStroke">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorUpdate">#bfbfbf</color>
+
+    <!--seal-->
+    <color name="colorHighestValue">#ce0606</color>
+    <color name="colorLowestValue">#6dbe55</color>
+    <color name="colorAverageBackground">#ededed</color>
+    <color name="colorAverageText">#9b9a9a</color>
+
+
+    <!--Charts-->
+    <color name="colorxAxisLine">#bababa</color>
+    <color name="colorxAxisLineText">#a7a7a7</color>
+
+    <!--ringView-->
+    <color name="red">#D95238</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="heart_default">#E48674</color>
+    <color name="heart_select">#E48674</color>
+    <color name="translucent">#10000000</color>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="heartbeat">#fce5d3</color>
+
+    <!--fragment home-->
+    <color name="colorGray">#f7f7f7</color>
+    <color name="colorDarkGray">#acacac</color>
+    <color name="colorResultOk">#dc4343</color>
+
 
 </resources>

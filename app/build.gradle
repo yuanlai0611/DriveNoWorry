@@ -19,6 +19,7 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
@@ -30,4 +31,14 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation 'jp.wasabeef:glide-transformations:3.1.1'
+    implementation 'pub.devrel:easypermissions:1.2.0'
+    implementation 'com.github.todou:appbarspring:1.0.6'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
 }

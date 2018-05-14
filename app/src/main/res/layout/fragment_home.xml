@@ -2,14 +2,300 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment.HomeFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+
+         <ImageView
+             android:scaleType="centerCrop"
+             android:src="@drawable/my_background"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/detection_switch"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/detection_switch_title"
+                android:textColor="@color/colorStaticsBackground"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="检测开关"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/detection_switch_selector"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="检测"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="OFF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/detection_switch_selector"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="疲劳检测"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="OFF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/detection_switch_selector"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <TextView
+                            android:textSize="14sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="酒精检测"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@drawable/switch_text_selector"
+                            android:text="OFF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/viewPager_container"
+        android:clipChildren="false"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/detection_switch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:clipChildren="false"
+        android:id="@+id/fragment_home_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+    </FrameLayout>
+
     <TextView
-        android:layout_centerInParent="true"
+        android:id="@+id/fragment_home_title"
+        android:textSize="20sp"
+        android:layout_marginTop="34dp"
+        android:layout_centerHorizontal="true"
+        android:text="My Car"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tab_home" />
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/temperature"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/fragment_home_title"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textSize="40sp"
+            android:textColor="@color/colorWhite"
+            android:text="35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:text="℃"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/temperature"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/temperature"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:alpha="0.8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:text="Weight   "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:alpha="0.8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:text="125KG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0.6"
+            android:background="@color/colorDivider" />
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:alpha="0.8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:text="Alcohol   "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:alpha="0.8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:text="0.01％"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
