@@ -1,92 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorWhite">
+    android:layout_height="match_parent">
+    
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <android.support.design.widget.CollapsingToolbarLayout
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:layout_width="match_parent"
-            android:layout_height="304dp"
-            android:background="@drawable/my_background">
-
-            <RelativeLayout
-                android:layout_marginTop="84dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/statics_viewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"/>
-
-                <!--<include-->
-                    <!--layout="@layout/statics_result_card"/>-->
-
-            </RelativeLayout>
-
-            <android.support.v7.widget.Toolbar
-                app:contentInsetStart="0dp"
-                android:paddingTop="24dp"
-                android:layout_width="match_parent"
-                android:layout_height="74dp">
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorStaticsBackground">
 
                 <RelativeLayout
-                    android:id="@+id/statics_title"
-                    android:layout_alignParentTop="true"
+                    android:background="@drawable/my_background"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="304dp">
 
-                    <LinearLayout
-                        android:id="@+id/linearLayout_decide_by_span"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/decide_time_span"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"
-                        android:orientation="horizontal"
-                        android:layout_width="55dp"
-                        android:layout_height="28dp">
-
-                        <TextView
-                            android:layout_marginStart="8dp"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/colorStaticsBackground"
-                            android:text="按月"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-
-                        <ImageView
-                            android:id="@+id/decide_by_span"
-                            android:layout_marginStart="5dp"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/below_more"
-                            android:layout_width="10dp"
-                            android:layout_height="10dp" />
-
-                    </LinearLayout>
+                    <android.support.v4.view.ViewPager
+                        android:layout_marginTop="84dp"
+                        android:id="@+id/statics_viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
 
                 </RelativeLayout>
 
-            </android.support.v7.widget.Toolbar>
+                <android.support.v7.widget.Toolbar
+                    app:contentInsetStart="0dp"
+                    android:paddingTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    app:layout_collapseMode="pin">
 
-        </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/statics_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
 
+                        <TextView
+                            android:textSize="20sp"
+                            android:typeface="serif"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/colorWhite"
+                            android:text="static analysis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="@color/colorBlack"
-                android:text="血压统计图"
+                        <LinearLayout
+                            android:id="@+id/linearLayout_decide_by_span"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/decide_time_span"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal"
+                            android:layout_width="55dp"
+                            android:layout_height="28dp">
+
+                            <TextView
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/colorStaticsBackground"
+                                android:text="按月"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:id="@+id/decide_by_span"
+                                android:layout_marginStart="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/below_more"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+<android.support.v4.widget.NestedScrollView
+    android:fillViewport="true"
+    android:background="@color/colorBackGround"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/static_sign"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorStaticsBackground"
+                    android:text="心跳统计图"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
 
             <TextView
+                android:typeface="serif"
                 android:textSize="13sp"
                 android:textColor="@color/colorUpdate"
                 android:layout_marginTop="10dp"
@@ -96,10 +142,569 @@
                 android:layout_height="wrap_content" />
 
             <com.github.mikephil.charting.charts.LineChart
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/line_chart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#ffffff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/static_sign"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorStaticsBackground"
+                    android:text="血压统计图"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <TextView
+                android:typeface="serif"
+                android:textSize="13sp"
+                android:textColor="@color/colorUpdate"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="每星期重新统计一遍"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/blood_line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
                 android:background="#ffffff"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="260dp">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/range_sign"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/colorStaticsBackground"
+                    android:layout_marginStart="5dp"
+                    android:text="合理范围"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bmi"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="28"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_gravity="center_horizontal"
+                            android:background="#868686"
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"/>
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:background="@drawable/circle_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:text="40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 我的BMI值:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_marginStart="10dp"
+                            android:text="18.5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:text="  kg/㎡"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 我的合理血压范围:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginEnd="15dp"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:textSize="18sp"
+                            android:text="80~110"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:text="  mg/100ml"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 我的合理心率范围:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginEnd="15dp"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:textSize="18sp"
+                            android:text="90"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textSize="12sp"
+                            android:text="  /min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/suggestion_sign"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/colorStaticsBackground"
+                        android:layout_marginStart="5dp"
+                        android:text="给我的建议"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginEnd="20dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/tag"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 根据BMI的建议:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:maxLines="5"
+                    android:layout_marginStart="43dp"
+                    android:text="您的体重在正常范围之内，建议您保持当前健康状态，继续坚持锻炼"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 根据上次驾驶的建议:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:maxLines="5"
+                    android:layout_marginStart="10dp"
+                    android:text="在本次行车旅途中，您的心率变化幅度较大，建议您开车途中避免精神紧张及压力过大。"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:text="※ 根据此月的建议:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:paddingRight="10dp"
+                    android:maxLines="5"
+                    android:layout_marginStart="41dp"
+                    android:text="在这个月的表现中，您的心率变化幅度较大，建议您开车途中避免精神紧张及压力过大。"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

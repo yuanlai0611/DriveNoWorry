@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/go_to_register"
+            android:background="@android:color/transparent"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@drawable/register_text_selector"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:text="注册"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/colorDarkBlack"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:typeface="serif"
+        android:textSize="24sp"
+        android:text="账号密码登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:hint="手机号/用户名"
+        android:drawableLeft="@drawable/user_name"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/password"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:textSize="15sp"
+        android:hint="密码"
+        android:paddingStart="10dp"
+        android:drawableLeft="@drawable/password"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:background="@drawable/login_button"
+        android:textColor="@color/colorWhite"
+        android:text="登录"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:textColor="@color/colorOrange"
+            android:text="同意DriveNoWorry用户协议"
+            android:buttonTint="@color/colorOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

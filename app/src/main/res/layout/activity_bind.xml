@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Login.LoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_gravity="right"
+        android:id="@+id/finish"
+        android:background="@android:color/transparent"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@drawable/register_text_selector"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="完成"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/colorDarkBlack"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:typeface="serif"
+        android:textSize="24sp"
+        android:text="个人信息设置"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/height_textView"
+        android:gravity="right"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:hint="身高"
+        android:drawableLeft="@drawable/height"
+        android:drawableRight="@drawable/more_small"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/weight_textView"
+        android:gravity="right"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:hint="体重"
+        android:drawableLeft="@drawable/weight_small"
+        android:drawableRight="@drawable/more_small"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sex"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/sex_textView"
+            android:textColor="@color/colorBindText"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/sex_switch"
+            android:layout_toStartOf="@+id/sex_switch"
+            android:text="女"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/sex_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:thumb="@drawable/switch_selector"
+            android:track="@drawable/switch_track" />
+
+        <View
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBindDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/age_textView"
+        android:gravity="right"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:hint="年纪"
+        android:drawableLeft="@drawable/age"
+        android:drawableRight="@drawable/more_small"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/place_textView"
+        android:gravity="right"
+        android:theme="@style/MyEditText"
+        android:paddingBottom="20dp"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:hint="地区"
+        android:drawableLeft="@drawable/place"
+        android:drawableRight="@drawable/more_small"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/high_blood_pressure"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/high_blood_textView"
+            android:textColor="@color/colorBindText"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/high_blood_switch"
+            android:layout_toStartOf="@+id/high_blood_switch"
+            android:text="无高血压病史"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/high_blood_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:thumb="@drawable/switch_selector"
+            android:track="@drawable/switch_track" />
+
+        <View
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBindDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/heart_disease"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/heart_textView"
+            android:textColor="@color/colorBindText"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@+id/heart_switch"
+            android:layout_toStartOf="@+id/heart_switch"
+            android:text="无心脏病史"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/heart_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:thumb="@drawable/switch_selector"
+            android:track="@drawable/switch_track" />
+
+        <View
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBindDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/question"
+            android:layout_width="18dp"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:text="无疑问可以查看"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

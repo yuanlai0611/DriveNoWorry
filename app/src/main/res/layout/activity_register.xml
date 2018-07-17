@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login.LoginActivity">
+
+    <ImageButton
+        android:id="@+id/back_to_login"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_back_selector" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:text="快速注册"
+        android:textColor="@color/colorDarkBlack"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/phone_number"
+        android:drawablePadding="10dp"
+        android:hint="11位手机号"
+        android:inputType="phone"
+        android:paddingBottom="20dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:theme="@style/MyEditText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/capture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/capture"
+            android:drawablePadding="10dp"
+            android:hint="验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingBottom="20dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            android:theme="@style/MyEditText" />
+
+        <Button
+            android:id="@+id/get_capture"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/register_button"
+            android:text="获取验证码"
+            android:textColor="@color/colorCaptureEnable" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="10dp"
+        android:hint="密码"
+        android:paddingBottom="20dp"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        android:theme="@style/MyEditText" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/login_button"
+        android:text="注册"
+        android:textColor="@color/colorWhite" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/agree_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorOrange"
+            android:text="同意DriveNoWorry用户协议"
+            android:textColor="@color/colorOrange" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#ffffff</color>
-
+    <color name="colorLightWhite">#e4e4e4</color>
 
     <!--FragmentTabHost的颜色-->
     <color name="colorPressed">#ea986c</color>
@@ -15,9 +15,8 @@
     <color name="colorText">#ffffff</color>
     <color name="colorDivider">#ffffff</color>
     <color name="colorPlate">#ffffff</color>
-    <color name="colorBackGround">#f5f5f5</color>
+    <color name="colorBackGround">#f1f1f1</color>
     <color name="colorPlateDivider">#d9dee1</color>
-
     <color name="colorToolbar">#ea986c</color>
 
     <!--log out button-->
@@ -32,6 +31,7 @@
     <color name="colorRadioButtonStroke">#ffffff</color>
     <color name="colorBlack">#000000</color>
     <color name="colorUpdate">#bfbfbf</color>
+    <color name="colorStaticGreen">#71e167</color>
 
     <!--seal-->
     <color name="colorHighestValue">#ce0606</color>
@@ -57,8 +57,30 @@
 
     <!--fragment home-->
     <color name="colorGray">#f7f7f7</color>
-    <color name="colorDarkGray">#acacac</color>
+    <color name="colorDarkGray">#c6c6c6</color>
+    <color name="colorDarkText">#a3a3a3</color>
+    <color name="colorLightGray">#d7d7d7</color>
     <color name="colorResultOk">#dc4343</color>
+    <color name="colorPictureBottom">#f16b35</color>
+    <color name="colorAlcohol">#964ed4</color>
+    <color name="colorHeart">#f1514c</color>
+    <color name="colorDark">#4c4c4c</color>
+    <color name="colorSwitchOn">#fc8404</color>
+    <color name="colorLightSwitchOn">#f1993c</color>
+    <color name="colorTitle">#ff3900</color>
+    <color name="colorBlood">#00ca6d</color>
+    <color name="colorSleep">#ffc500</color>
 
 
+    <!--login-->
+    <color name="colorOrange">#f57c20</color>
+    <color name="colorDarkBlack">#262626</color>
+    <color name="colorUnFocus">#c4c4c4</color>
+    <color name="colorRegisterButtonNormal">#ededed</color>
+    <color name="colorRegisterButtonPressed">#e1e0e0</color>
+    <color name="colorBindText">#9b9b9b</color>
+    <color name="colorBindDivider">#c9c8c8</color>
+
+    <color name="colorCaptureEnable">#696969</color>
+    <color name="colorCaptureDisable">#b6b6b6</color>
 </resources>

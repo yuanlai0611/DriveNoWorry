@@ -265,6 +265,7 @@
                         android:textSize="11sp" />
 
                     <Switch
+                        android:id="@+id/emergency_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -283,6 +284,7 @@
                     android:background="@color/colorPlateDivider" />
 
                 <RelativeLayout
+                    android:id="@+id/set_phone_relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="45dp">
 
@@ -304,12 +306,12 @@
                         android:src="@drawable/more" />
 
                     <TextView
+                        android:id="@+id/emergency_phone_textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@id/set_emergency_call_more"
                         android:alpha="0.8"
-                        android:text="17607110024"
                         android:textSize="13sp" />
 
                     <TextView
@@ -323,6 +325,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/set_message_relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="45dp">
 
@@ -344,6 +347,7 @@
                         android:src="@drawable/more" />
 
                     <TextView
+                        android:id="@+id/emergency_message_textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -351,7 +355,6 @@
                         android:layout_marginEnd="30dp"
                         android:layout_toStartOf="@id/set_emergency_text_more"
                         android:alpha="0.8"
-                        android:text="我现在身体不舒适"
                         android:textSize="13sp" />
 
                     <TextView

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/LockTheme">
+
+    <com.example.yuanyuanlai.drivenoworry.Lock.UnderView
+        android:id="@+id/mUnderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/mMoveView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/lock_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_marginBottom="70dp"
+            android:layout_above="@+id/shimmer_view_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/phone"
+                    android:layout_marginEnd="50dp"
+                    android:layout_alignParentEnd="true"
+                    style="?borderlessButtonStyle"
+                    android:id="@+id/emergency_call"
+                    android:textColor="@android:color/white"
+                    android:text="紧急呼叫"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginStart="50dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/message"
+                    style="?borderlessButtonStyle"
+                    android:id="@+id/emergency_text"
+                    android:textColor="@android:color/white"
+                    android:text="紧急信息"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/swipe_to_open"
+            android:textSize="26sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white"
+            android:text="滑动屏幕解锁"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:text="12:00"
+            android:id="@+id/time"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="70sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/date"
+            android:textColor="@android:color/white"
+            android:text="5月12日星期六"
+            android:textSize="16sp"
+            android:layout_below="@+id/time"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
